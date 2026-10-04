@@ -16,7 +16,24 @@ const projects = [
   },
 ]
 
-const certifications = ['Certification 1', 'Certification 2', 'Certification 3']
+const certifications = [
+  {
+    name: 'AWS Certified Solutions Architect – Associate',
+    issuedBy: 'Amazon Web Services (AWS)',
+    issuedDate: '2026-08-14',
+    validUntil: '2029-08-14',
+    url: 'https://www.credly.com/badges/7e93e7ce-1af2-4c8e-9c64-43a278e023d9/linked_in_profile',
+    imagePath: '/certifications/certifs/AWS-SAA.png',
+  },
+  {
+    name: 'HashiCorp Certified: Terraform Associate (004)',
+    issuedBy: 'IBM Professional Certification',
+    issuedDate: '2026-09-26',
+    validUntil: '2028-09-26',
+    url: 'https://www.credly.com/badges/c8518210-f8c0-4ad5-8f45-98f2f4708d86/linked_in_profile',
+    imagePath: '/certifications/certifs/hashicorp-terraform.png',
+  },
+]
 
 const about = {
   social: {
