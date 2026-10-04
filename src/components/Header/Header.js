@@ -1,20 +1,17 @@
-import { header } from '../../portfolio'
+import { Link } from 'react-router-dom'
+import { home } from '../../portfolio'
 import Navbar from '../Navbar/Navbar'
 import './Header.css'
 
 const Header = () => {
-  const { homepage, title } = header
+  const { name } = home
 
   return (
     <header className='header center'>
       <h3>
-        {homepage ? (
-          <a href={homepage} className='link'>
-            {title}
-          </a>
-        ) : (
-          title
-        )}
+        <Link to='/' className='link'>
+          {name}
+        </Link>
       </h3>
       <Navbar />
     </header>

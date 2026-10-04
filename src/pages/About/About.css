@@ -1,0 +1,15 @@
+.about__list {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.about__list-item {
+  margin: 1em 0;
+}
+
+.about__link {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 1.1rem;
+}

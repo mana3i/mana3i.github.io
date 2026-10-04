@@ -1,0 +1,50 @@
+.home {
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.home__name {
+  color: var(--clr-primary);
+}
+
+.home__role {
+  margin-top: 1.2em;
+}
+
+.home__desc {
+  margin-top: 2.4em;
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.home__header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.home__picture {
+  width: 180px;
+  height: 180px;
+  border-radius: 70%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.home__intro {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .app .home {
+    align-items: flex-start;
+    margin-top: 2em;
+  }
+
+  .home__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

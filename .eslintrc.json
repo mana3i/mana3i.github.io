@@ -17,6 +17,19 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
+  "overrides": [
+    {
+      "files": ["src/setupProxy.js"],
+      "env": { "node": true }
+    },
+    {
+      "files": ["src/pages/ProjectDetails/content.js"],
+      "rules": {
+        "import/no-webpack-loader-syntax": "off",
+        "import/no-unresolved": "off"
+      }
+    }
+  ],
   "rules": {
     "no-unused-vars": "warn",
     "no-console": "off",

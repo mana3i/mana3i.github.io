@@ -1,13 +1,24 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { ThemeContext } from './contexts/theme'
 import Header from './components/Header/Header'
-import About from './components/About/About'
-import Projects from './components/Projects/Projects'
-import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
-import Contact from './components/Contact/Contact'
-import Footer from './components/Footer/Footer'
+import Home from './pages/Home/Home'
+import Projects from './pages/Projects/Projects'
+import ProjectDetails from './pages/ProjectDetails/ProjectDetails'
+import Certifications from './pages/Certifications/Certifications'
+import About from './pages/About/About'
 import './App.css'
+
+const ScrollToTopOnNavigate = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [pathname])
+
+  return null
+}
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
@@ -17,14 +28,19 @@ const App = () => {
       <Header />
 
       <main>
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <ScrollToTopOnNavigate />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/projects/:id' element={<ProjectDetails />} />
+          <Route path='/certifications' element={<Certifications />} />
+          <Route path='/about' element={<About />} />
+          <Route path='*' element={<Navigate to='/' replace />} />
+        </Routes>
       </main>
 
       <ScrollToTop />
-      <Footer />
     </div>
   )
 }
