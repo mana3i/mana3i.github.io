@@ -28,11 +28,7 @@ const Navbar = () => {
       >
         {links.map(({ to, label }) => (
           <li key={label} className='nav__list-item'>
-            <NavLink
-              to={to}
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
+            <NavLink to={to} onClick={toggleNavList} className='link link--nav'>
               {label}
             </NavLink>
           </li>
