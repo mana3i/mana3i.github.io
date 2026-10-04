@@ -28,6 +28,10 @@
         "import/no-webpack-loader-syntax": "off",
         "import/no-unresolved": "off"
       }
+    },
+    {
+      "files": ["src/**/*.test.js", "src/setupTests.js"],
+      "env": { "jest": true }
     }
   ],
   "rules": {
