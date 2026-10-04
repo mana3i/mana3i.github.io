@@ -42,9 +42,7 @@ describe('Certifications', () => {
     const awsBadge = screen.getByAltText(
       /AWS Certified Solutions Architect.*badge/i
     )
-    const terraformBadge = screen.getByAltText(
-      /HashiCorp Certified.*badge/i
-    )
+    const terraformBadge = screen.getByAltText(/HashiCorp Certified.*badge/i)
 
     expect(awsBadge).toHaveAttribute(
       'src',
@@ -64,11 +62,11 @@ describe('Certifications', () => {
     })
 
     expect(credentialLinks).toHaveLength(2)
-    expect(credentialLinks[0]).toHaveAttribute(
+    expect(credentialLinks[1]).toHaveAttribute(
       'href',
       'https://www.credly.com/badges/7e93e7ce-1af2-4c8e-9c64-43a278e023d9/linked_in_profile'
     )
-    expect(credentialLinks[1]).toHaveAttribute(
+    expect(credentialLinks[0]).toHaveAttribute(
       'href',
       'https://www.credly.com/badges/c8518210-f8c0-4ad5-8f45-98f2f4708d86/linked_in_profile'
     )
