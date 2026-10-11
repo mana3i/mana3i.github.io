@@ -32,6 +32,13 @@
   object-fit: cover;
 }
 
+.project__read-time {
+  margin-top: 0.5em;
+  font-size: 0.85rem;
+  color: var(--clr-fg-alt);
+  opacity: 0.7;
+}
+
 .project__description {
   margin-top: 1em;
 }

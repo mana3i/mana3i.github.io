@@ -2,6 +2,8 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import Home from './Home'
 
+jest.mock('../ProjectDetails/content', () => ({}))
+
 const renderHome = () =>
   render(
     <MemoryRouter>

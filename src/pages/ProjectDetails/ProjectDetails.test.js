@@ -39,4 +39,19 @@ describe('ProjectDetails', () => {
     expect(screen.getByText('AWS')).toBeInTheDocument()
     expect(screen.getByText('RDS')).toBeInTheDocument()
   })
+
+  it('renders the serverless project name, description and stack', () => {
+    renderProjectDetails('serverless-image-pipeline')
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Building a Serverless Image Processing Pipeline with S3/i,
+      })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/Serverless image processing pipeline on AWS/i)
+    ).toBeInTheDocument()
+    expect(screen.getByText('API Gateway')).toBeInTheDocument()
+    expect(screen.getByText('Step Functions')).toBeInTheDocument()
+  })
 })
