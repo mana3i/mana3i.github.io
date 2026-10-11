@@ -20,6 +20,9 @@ describe('About', () => {
       'href',
       'https://www.linkedin.com/in/amine-manai'
     )
-    expect(emailLink).toHaveAttribute('href', 'mailto:johnsmith@mail.com')
+    expect(emailLink).toHaveAttribute(
+      'href',
+      'mailto:amine.manai@supcom.tn'
+    )
   })
 })
