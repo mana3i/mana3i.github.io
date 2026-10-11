@@ -22,7 +22,7 @@ describe('App', () => {
       screen.getByRole('heading', { level: 1, name: /Amine Manai/i })
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /DevOps Engineer/i })
+      screen.getByRole('heading', { name: /DevOps\/Cloud Engineer/i })
     ).toBeInTheDocument()
   })
 

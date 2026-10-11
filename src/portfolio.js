@@ -1,6 +1,6 @@
 const home = {
   name: 'Amine Manai',
-  role: 'DevOps Engineer',
+  role: 'DevOps/Cloud Engineer',
   picture: 'amine.jpg',
   description:
     'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
@@ -39,7 +39,7 @@ const about = {
   social: {
     github: 'https://github.com/mana3i',
     linkedin: 'https://www.linkedin.com/in/amine-manai',
-    email: 'johnsmith@mail.com',
+    email: 'amine.manai@supcom.tn',
   },
 }
 
