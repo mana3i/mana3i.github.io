@@ -14,6 +14,22 @@ const projects = [
       'Highly available three-tier AWS architecture with an Application Load Balancer, Auto Scaling, CloudFront, WAF and a Multi-AZ database spread across two Availability Zones.',
     stack: ['AWS', 'EC2', 'ALB', 'Auto Scaling', 'RDS', 'CloudFront', 'WAF'],
   },
+  {
+    id: 'serverless-image-pipeline',
+    name: 'Building a Serverless Image Processing Pipeline with S3, SQS, Lambda & Step Functions',
+    description:
+      'Serverless image processing pipeline on AWS: clients upload directly to S3 with pre-signed URLs, SQS buffers events, Step Functions orchestrates validation, resizing and watermarking, DynamoDB stores metadata, CloudFront delivers results and SNS sends notifications.',
+    stack: [
+      'API Gateway',
+      'Lambda',
+      'S3',
+      'SQS',
+      'Step Functions',
+      'DynamoDB',
+      'CloudFront',
+      'SNS',
+    ],
+  },
 ]
 
 const certifications = [

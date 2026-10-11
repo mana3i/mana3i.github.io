@@ -145,6 +145,23 @@
   background-color: var(--clr-bg-alt);
 }
 
+.docs__content pre {
+  margin: 1.2em 0;
+  padding: 1.2em 1.4em;
+  background-color: var(--clr-code-bg);
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+.docs__content pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
 .docs__sidebar {
   position: sticky;
   top: 2em;
