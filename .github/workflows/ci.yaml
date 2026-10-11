@@ -33,6 +33,14 @@ jobs:
 
       - name: build
         run: npm run build
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./build
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
