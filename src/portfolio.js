@@ -30,6 +30,21 @@ const projects = [
       'SNS',
     ],
   },
+  {
+    id: 'serverless-rest-api',
+    name: 'Serverless REST API on AWS: Cognito, API Gateway, Lambda, DynamoDB, WAF and X-Ray',
+    description:
+      'Production-ready serverless backend for a to-do application: Cognito issues JWTs and an API Gateway authorizer validates them, WAF rate-limits and filters injection attempts at the edge, API Gateway validates requests and caches responses, Lambda handles CRUD scoped to each user, DynamoDB Streams drive asynchronous processing, and X-Ray traces every hop.',
+    stack: [
+      'CloudFront',
+      'Cognito',
+      'API Gateway',
+      'Lambda',
+      'DynamoDB',
+      'WAF',
+      'X-Ray',
+    ],
+  },
 ]
 
 const certifications = [

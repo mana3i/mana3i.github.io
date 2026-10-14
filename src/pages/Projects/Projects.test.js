@@ -5,6 +5,7 @@ import Projects from './Projects'
 jest.mock('../ProjectDetails/content', () => ({
   'aws-scalable-web-app': { markdown: 'word '.repeat(200), assets: {} },
   'serverless-image-pipeline': { markdown: 'word '.repeat(400), assets: {} },
+  'serverless-rest-api': { markdown: 'word '.repeat(600), assets: {} },
 }))
 
 const renderProjects = () =>
@@ -36,7 +37,7 @@ describe('Projects', () => {
     ).toBeInTheDocument()
     expect(screen.getByText('AWS')).toBeInTheDocument()
     expect(screen.getByText('EC2')).toBeInTheDocument()
-    expect(screen.getByText('WAF')).toBeInTheDocument()
+    expect(screen.getAllByText('WAF')[0]).toBeInTheDocument()
   })
 
   it('renders the second project name, description and stack', () => {
@@ -50,9 +51,25 @@ describe('Projects', () => {
     expect(
       screen.getByText(/Serverless image processing pipeline on AWS/i)
     ).toBeInTheDocument()
-    expect(screen.getByText('API Gateway')).toBeInTheDocument()
+    expect(screen.getAllByText('API Gateway')[0]).toBeInTheDocument()
     expect(screen.getByText('Step Functions')).toBeInTheDocument()
     expect(screen.getByText('SNS')).toBeInTheDocument()
+  })
+
+  it('renders the third project name, description and stack', () => {
+    renderProjects()
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Serverless REST API on AWS: Cognito/i,
+      })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/Production-ready serverless backend for a to-do/i)
+    ).toBeInTheDocument()
+    expect(screen.getByText('Cognito')).toBeInTheDocument()
+    expect(screen.getAllByText('DynamoDB')[0]).toBeInTheDocument()
+    expect(screen.getByText('X-Ray')).toBeInTheDocument()
   })
 
   it('links each project to its details page', () => {
@@ -68,6 +85,11 @@ describe('Projects', () => {
         name: /Building a Serverless Image Processing Pipeline with S3/i,
       })
     ).toHaveAttribute('href', '/projects/serverless-image-pipeline')
+    expect(
+      screen.getByRole('link', {
+        name: /Serverless REST API on AWS: Cognito/i,
+      })
+    ).toHaveAttribute('href', '/projects/serverless-rest-api')
   })
 
   it('renders the reading time for each project', () => {
@@ -75,5 +97,6 @@ describe('Projects', () => {
 
     expect(screen.getByText('1 min read')).toBeInTheDocument()
     expect(screen.getByText('2 mins read')).toBeInTheDocument()
+    expect(screen.getByText('3 mins read')).toBeInTheDocument()
   })
 })

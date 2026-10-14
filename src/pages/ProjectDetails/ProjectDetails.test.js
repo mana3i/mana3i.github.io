@@ -54,4 +54,19 @@ describe('ProjectDetails', () => {
     expect(screen.getByText('API Gateway')).toBeInTheDocument()
     expect(screen.getByText('Step Functions')).toBeInTheDocument()
   })
+
+  it('renders the third project name, description and stack', () => {
+    renderProjectDetails('serverless-rest-api')
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Serverless REST API on AWS: Cognito/i,
+      })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/Production-ready serverless backend for a to-do/i)
+    ).toBeInTheDocument()
+    expect(screen.getByText('Cognito')).toBeInTheDocument()
+    expect(screen.getByText('X-Ray')).toBeInTheDocument()
+  })
 })
