@@ -16,18 +16,18 @@ describe('Navbar', () => {
   it('renders links to every section', () => {
     renderNavbar()
 
-    expect(screen.getByRole('link', { name: 'home' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Home' })).toHaveAttribute(
       'href',
       '/'
     )
-    expect(screen.getByRole('link', { name: 'projects' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Projects' })).toHaveAttribute(
       'href',
       '/projects'
     )
     expect(
-      screen.getByRole('link', { name: 'certifications' })
+      screen.getByRole('link', { name: 'Certifications' })
     ).toHaveAttribute('href', '/certifications')
-    expect(screen.getByRole('link', { name: 'about' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
       'href',
       '/about'
     )

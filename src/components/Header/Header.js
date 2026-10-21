@@ -7,13 +7,15 @@ const Header = () => {
   const { name } = home
 
   return (
-    <header className='header center'>
-      <h3>
-        <Link to='/' className='link'>
-          {name}
-        </Link>
-      </h3>
-      <Navbar />
+    <header className='header'>
+      <div className='header__inner center'>
+        <h3>
+          <Link to='/' className='link'>
+            {name}
+          </Link>
+        </h3>
+        <Navbar />
+      </div>
     </header>
   )
 }
