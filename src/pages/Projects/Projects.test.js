@@ -6,6 +6,7 @@ jest.mock('../ProjectDetails/content', () => ({
   'aws-scalable-web-app': { markdown: 'word '.repeat(200), assets: {} },
   'serverless-image-pipeline': { markdown: 'word '.repeat(400), assets: {} },
   'serverless-rest-api': { markdown: 'word '.repeat(600), assets: {} },
+  'single-node-k8s-cluster': { markdown: 'word '.repeat(800), assets: {} },
 }))
 
 const renderProjects = () =>
@@ -72,6 +73,21 @@ describe('Projects', () => {
     expect(screen.getByText('X-Ray')).toBeInTheDocument()
   })
 
+  it('renders the fourth project name, description and stack', () => {
+    renderProjects()
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Single-Node Kubernetes Cluster with Terraform, Ansible, Cilium/i,
+      })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/Fully automated single-node Kubernetes cluster/i)
+    ).toBeInTheDocument()
+    expect(screen.getByText('kubeadm')).toBeInTheDocument()
+    expect(screen.getByText('Grafana')).toBeInTheDocument()
+  })
+
   it('links each project to its details page', () => {
     renderProjects()
 
@@ -90,6 +106,11 @@ describe('Projects', () => {
         name: /Serverless REST API on AWS: Cognito/i,
       })
     ).toHaveAttribute('href', '/projects/serverless-rest-api')
+    expect(
+      screen.getByRole('link', {
+        name: /Single-Node Kubernetes Cluster with Terraform, Ansible, Cilium/i,
+      })
+    ).toHaveAttribute('href', '/projects/single-node-k8s-cluster')
   })
 
   it('renders the reading time for each project', () => {
@@ -98,5 +119,6 @@ describe('Projects', () => {
     expect(screen.getByText('1 min read')).toBeInTheDocument()
     expect(screen.getByText('2 mins read')).toBeInTheDocument()
     expect(screen.getByText('3 mins read')).toBeInTheDocument()
+    expect(screen.getByText('4 mins read')).toBeInTheDocument()
   })
 })

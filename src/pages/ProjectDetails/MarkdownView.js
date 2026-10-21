@@ -1,14 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Markdown from 'markdown-to-jsx'
-
-const textOf = (node) => {
-  if (node === null || node === undefined) return ''
-  if (typeof node === 'string' || typeof node === 'number') return String(node)
-  if (Array.isArray(node)) return node.map(textOf).join('')
-  if (node.props && node.props.children) return textOf(node.props.children)
-  return ''
-}
+import textOf from './textOf'
+import CodeBlock from './CodeBlock'
 
 const slugify = (text) =>
   text
@@ -115,6 +109,7 @@ const MarkdownView = ({ content }) => {
       h2: { component: MarkdownHeading },
       img: { component: MarkdownImage, props: { assets: content.assets } },
       a: { component: MarkdownLink },
+      pre: { component: CodeBlock },
     }),
     [content.assets]
   )

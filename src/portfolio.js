@@ -45,6 +45,21 @@ const projects = [
       'X-Ray',
     ],
   },
+  {
+    id: 'single-node-k8s-cluster',
+    name: 'Single-Node Kubernetes Cluster with Terraform, Ansible, Cilium, Prometheus and Grafana',
+    description:
+      'Fully automated single-node Kubernetes cluster: Terraform creates a Debian VM on VMware Workstation, Ansible bootstraps it with kubeadm, containerd and Cilium, deploys a 3-pod demo app, and installs a complete observability stack with Prometheus, Grafana and Hubble.',
+    stack: [
+      'Kubernetes',
+      'kubeadm',
+      'Terraform',
+      'Ansible',
+      'Cilium',
+      'Prometheus',
+      'Grafana',
+    ],
+  },
 ]
 
 const certifications = [

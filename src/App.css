@@ -13,6 +13,14 @@
   --clr-fg-alt: #000;
   --clr-primary: #2978b5;
   --clr-code-bg: #f2f2f2;
+  --clr-syn-keyword: #cf222e;
+  --clr-syn-string: #0a3069;
+  --clr-syn-comment: #57606a;
+  --clr-syn-function: #8250df;
+  --clr-syn-number: #0550ae;
+  --clr-syn-attr: #0550ae;
+  --clr-syn-variable: #953800;
+  --clr-syn-tag: #116329;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -23,6 +31,14 @@
   --clr-fg-alt: #fff;
   --clr-primary: #8ab4f8;
   --clr-code-bg: #1c1c1c;
+  --clr-syn-keyword: #ff7b72;
+  --clr-syn-string: #a5d6ff;
+  --clr-syn-comment: #8b949e;
+  --clr-syn-function: #d2a8ff;
+  --clr-syn-number: #79c0ff;
+  --clr-syn-attr: #79c0ff;
+  --clr-syn-variable: #ffa657;
+  --clr-syn-tag: #7ee787;
   --shadow: rgba(0, 0, 0, 0.6) 0px 10px 36px 0px,
     rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
 }

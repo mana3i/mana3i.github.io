@@ -69,4 +69,19 @@ describe('ProjectDetails', () => {
     expect(screen.getByText('Cognito')).toBeInTheDocument()
     expect(screen.getByText('X-Ray')).toBeInTheDocument()
   })
+
+  it('renders the fourth project name, description and stack', () => {
+    renderProjectDetails('single-node-k8s-cluster')
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Single-Node Kubernetes Cluster with Terraform, Ansible, Cilium/i,
+      })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/Fully automated single-node Kubernetes cluster/i)
+    ).toBeInTheDocument()
+    expect(screen.getByText('kubeadm')).toBeInTheDocument()
+    expect(screen.getByText('Grafana')).toBeInTheDocument()
+  })
 })

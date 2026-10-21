@@ -162,6 +162,43 @@
   background-color: transparent;
 }
 
+.docs__content pre code .token.comment {
+  color: var(--clr-syn-comment);
+  font-style: italic;
+}
+
+.docs__content pre code .token.keyword,
+.docs__content pre code .token.builtin {
+  color: var(--clr-syn-keyword);
+}
+
+.docs__content pre code .token.string,
+.docs__content pre code .token.attr-value {
+  color: var(--clr-syn-string);
+}
+
+.docs__content pre code .token.function {
+  color: var(--clr-syn-function);
+}
+
+.docs__content pre code .token.number,
+.docs__content pre code .token.boolean {
+  color: var(--clr-syn-number);
+}
+
+.docs__content pre code .token.attr-name,
+.docs__content pre code .token.property {
+  color: var(--clr-syn-attr);
+}
+
+.docs__content pre code .token.variable {
+  color: var(--clr-syn-variable);
+}
+
+.docs__content pre code .token.tag {
+  color: var(--clr-syn-tag);
+}
+
 .docs__sidebar {
   position: sticky;
   top: 2em;
