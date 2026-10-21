@@ -8,10 +8,10 @@ import { ThemeContext } from '../../contexts/theme'
 import './Navbar.css'
 
 const links = [
-  { to: '/', label: 'home' },
-  { to: '/projects', label: 'projects' },
-  { to: '/certifications', label: 'certifications' },
-  { to: '/about', label: 'about' },
+  { to: '/', label: 'Home' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/certifications', label: 'Certifications' },
+  { to: '/about', label: 'About' },
 ]
 
 const Navbar = () => {

@@ -19,7 +19,7 @@ describe('App', () => {
     renderApp()
 
     expect(
-      screen.getByRole('heading', { level: 1, name: /Amine Manai/i })
+      screen.getByRole('heading', { level: 1, name: /Amine Manai's blog/i })
     ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /DevOps\/Cloud Engineer/i })
@@ -29,7 +29,7 @@ describe('App', () => {
   it('navigates to the projects page when the projects link is clicked', () => {
     renderApp()
 
-    fireEvent.click(screen.getByRole('link', { name: 'projects' }))
+    fireEvent.click(screen.getByRole('link', { name: 'Projects' }))
 
     expect(
       screen.getByRole('heading', { name: 'Projects' })
@@ -43,7 +43,7 @@ describe('App', () => {
     renderApp('/does-not-exist')
 
     expect(
-      screen.getByRole('heading', { level: 1, name: /Amine Manai/i })
+      screen.getByRole('heading', { level: 1, name: /Amine Manai's blog/i })
     ).toBeInTheDocument()
   })
 })

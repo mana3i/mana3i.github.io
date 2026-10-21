@@ -1,5 +1,5 @@
 const home = {
-  name: 'Amine Manai',
+  name: "Amine Manai's blog",
   role: 'DevOps/Cloud Engineer',
   picture: 'amine.jpg',
   description:

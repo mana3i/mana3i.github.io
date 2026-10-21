@@ -16,7 +16,7 @@ describe('Home', () => {
     renderHome()
 
     expect(
-      screen.getByRole('heading', { name: /Amine Manai/i })
+      screen.getByRole('heading', { name: /Amine Manai's blog/i })
     ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /DevOps\/Cloud Engineer/i })
@@ -26,7 +26,7 @@ describe('Home', () => {
   it('renders the profile picture with the name as alt text', () => {
     renderHome()
 
-    expect(screen.getByAltText(/Amine Manai/i)).toHaveAttribute(
+    expect(screen.getByAltText(/Amine Manai's blog/i)).toHaveAttribute(
       'src',
       '/images/amine.jpg'
     )

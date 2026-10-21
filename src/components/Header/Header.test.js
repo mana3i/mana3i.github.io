@@ -17,14 +17,14 @@ describe('Header', () => {
     renderHeader()
 
     expect(
-      screen.getByRole('link', { name: /Amine Manai/i })
+      screen.getByRole('link', { name: /Amine Manai's blog/i })
     ).toHaveAttribute('href', '/')
   })
 
   it('renders the navigation', () => {
     renderHeader()
 
-    expect(screen.getByRole('link', { name: 'projects' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'about' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Projects' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument()
   })
 })
