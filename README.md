@@ -1,4 +1,4 @@
-# Amine Manai — Portfolio
+# Amine Manai —- Portfolio
 
 Personal portfolio built with React.
 
